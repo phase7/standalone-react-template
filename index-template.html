@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Standing Alone React</title>
+  </head>
+  <body>
+
+
+    <div class="ratul-app" data-userid='1'></div><div class="ratul-app" data-userid='2'></div>
+
+    <!-- Load React. -->
+    <script src="https://unpkg.com/@babel/standalone@7.12.6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+    <!-- Our React App (notice the type is babel) -->
+    <script src="./app.min.js" type='text/babel'></script>
+
+  </body>
+</html>
