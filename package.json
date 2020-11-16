@@ -4,7 +4,9 @@
   "main": "app.js",
   "scripts": {
     "start": "cd build && python3 -m http.server 8888",
-    "build": "npx babel app.js --out-file build/app.min.js --presets minify --watch"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "npx babel app.js --out-file build/app.min.js --presets minify"
   },
   "keywords": [],
   "author": "phase7",
@@ -16,6 +18,8 @@
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-transform-react-jsx": "^7.2.0",
     "babel-minify": "^0.5.0",
-    "babel-preset-minify": "^0.5.0"
-  }
+    "babel-preset-minify": "^0.5.0",
+    "gh-pages": "^3.1.0"
+  },
+  "homepage": "http://phase7.github.io/stanalone-react-template"
 }
